@@ -1,0 +1,21 @@
+name: Auctioneer
+descrption: A simple auctioning plugin
+version: 1.0
+
+authors: [jmgr2007, tehtros]
+website: darkmesa.co.cc
+
+main: darkMesa.bukkit.Auctioneer.Auctioneer
+
+depend: [Vault]
+
+commands:
+  auc:
+    description: All commands use this prefix. For help, type this prefix alone.
+permissions:
+  auctioneer.bid:
+    description: Allow users to bid.
+  auctioneer.start:
+    description: Allow users to start an auction.
+  auctioneer.admin:
+    description: Admin commands for auctions.
