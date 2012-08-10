@@ -108,12 +108,15 @@ public class Auctioneer extends JavaPlugin {
 					}
 				} else {
 					if(sender.hasPermission("auctioneer.use") || sender.isOp()) {
-						sender.sendMessage("/" + commandLabel + " new <initial bid> -- Start an auction! Hold the item, and amount you want to auction off in your hand");
 						sender.sendMessage("/" + commandLabel + " bid <amount> -- Place a bid during an auction!");
+					}
+					
+					if(sender.hasPermission("auctioneer.start") || sender.isOp()) {
+						sender.sendMessage("/" + commandLabel + " new [initial bid] -- Start an auction! Hold the item, and amount you want to auction off in your hand");
 					}
 
 					if(sender.hasPermission("auctioneer.admin")) {
-						sender.sendMessage("/" + commandLabel + " end -- end an auction!");
+						sender.sendMessage("/" + commandLabel + " end -- End the current auction, exactly the same as if the time had run out.");
 					}
 				}
 			}
